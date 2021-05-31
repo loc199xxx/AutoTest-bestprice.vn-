@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.9.4 on win32)" generated="20210531 19:06:06.403" rpa="false" schemaversion="2">
+<suite id="s1" name="Test" source="C:\Users\lock\PycharmProjects\GoToTheMoon\script\test.robot">
+<kw name="Common - Open Browser" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${browser_chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210531 19:06:06.671" level="INFO">Opening browser 'Chrome' to base url 'https://www.bestprice.vn/'.</msg>
+<status status="PASS" starttime="20210531 19:06:06.670" endtime="20210531 19:06:09.911"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210531 19:06:09.912" endtime="20210531 19:06:10.040"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:06.670" endtime="20210531 19:06:10.040"/>
+</kw>
+<test id="s1-t1" name="TC1">
+<kw name="Search - Choose From" library="search">
+<kw name="Common - Click Element" library="common">
+<arg>${btn_from}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${element_lct}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210531 19:06:10.076" level="INFO">Element 'name=From' is displayed.</msg>
+<status status="PASS" starttime="20210531 19:06:10.044" endtime="20210531 19:06:10.076"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:10.043" endtime="20210531 19:06:10.076"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210531 19:06:10.077" level="INFO">Clicking element 'name=From'.</msg>
+<status status="PASS" starttime="20210531 19:06:10.077" endtime="20210531 19:06:10.185"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:10.042" endtime="20210531 19:06:10.185"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:10.042" endtime="20210531 19:06:10.186"/>
+</kw>
+<kw name="Search - Input" library="search">
+<arg>${inp_from}</arg>
+<arg>Han</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>ELEMENT SHOULD BE VISIBLE</arg>
+<arg>${element_lct}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210531 19:06:10.284" level="INFO">Element '//*[@id="tab_search_flight"]//child::input[@data-id='flight_from' and @dir]' is displayed.</msg>
+<status status="PASS" starttime="20210531 19:06:10.188" endtime="20210531 19:06:10.284"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:10.187" endtime="20210531 19:06:10.285"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<arg>${txt}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210531 19:06:10.286" level="INFO">Typing text 'Han' into text field '//*[@id="tab_search_flight"]//child::input[@data-id='flight_from' and @dir]'.</msg>
+<status status="PASS" starttime="20210531 19:06:10.285" endtime="20210531 19:06:10.371"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:10.186" endtime="20210531 19:06:10.372"/>
+</kw>
+<kw name="Common - Click Element" library="common">
+<arg>${select_from}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${element_lct}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210531 19:06:10.909" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-170.png"&gt;&lt;img src="selenium-screenshot-170.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210531 19:06:10.388" endtime="20210531 19:06:10.909"/>
+</kw>
+<msg timestamp="20210531 19:06:10.912" level="FAIL">Element with locator '//div[@id='tab_search_flight']/div/form/div/div/div/div[2]/div/div[2]/span/span[2]/div/span[2]/div/p/strong/strong' not found.</msg>
+<status status="FAIL" starttime="20210531 19:06:10.374" endtime="20210531 19:06:10.912"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210531 19:06:12.945" level="INFO">Element '//div[@id='tab_search_flight']/div/form/div/div/div/div[2]/div/div[2]/span/span[2]/div/span[2]/div/p/strong/strong' is displayed.</msg>
+<status status="PASS" starttime="20210531 19:06:12.921" endtime="20210531 19:06:12.945"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:10.373" endtime="20210531 19:06:12.946"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210531 19:06:12.946" level="INFO">Clicking element '//div[@id='tab_search_flight']/div/form/div/div/div/div[2]/div/div[2]/span/span[2]/div/span[2]/div/p/strong/strong'.</msg>
+<status status="PASS" starttime="20210531 19:06:12.946" endtime="20210531 19:06:13.037"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:10.372" endtime="20210531 19:06:13.037"/>
+</kw>
+<kw name="Search - Choose To" library="search">
+<kw name="Common - Click Element" library="common">
+<arg>${btn_to}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${element_lct}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210531 19:06:13.059" level="INFO">Element 'name=To' is displayed.</msg>
+<status status="PASS" starttime="20210531 19:06:13.039" endtime="20210531 19:06:13.059"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:13.038" endtime="20210531 19:06:13.059"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210531 19:06:13.060" level="INFO">Clicking element 'name=To'.</msg>
+<status status="PASS" starttime="20210531 19:06:13.060" endtime="20210531 19:06:13.146"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:13.038" endtime="20210531 19:06:13.146"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:13.037" endtime="20210531 19:06:13.146"/>
+</kw>
+<kw name="Search - Input" library="search">
+<arg>${inp_to}</arg>
+<arg>Ho c</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>ELEMENT SHOULD BE VISIBLE</arg>
+<arg>${element_lct}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210531 19:06:13.178" level="INFO">Element '//*[@id="tab_search_flight"]//child::input[@data-id='flight_to' and @dir]' is displayed.</msg>
+<status status="PASS" starttime="20210531 19:06:13.148" endtime="20210531 19:06:13.178"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:13.147" endtime="20210531 19:06:13.178"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<arg>${txt}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210531 19:06:13.179" level="INFO">Typing text 'Ho c' into text field '//*[@id="tab_search_flight"]//child::input[@data-id='flight_to' and @dir]'.</msg>
+<status status="PASS" starttime="20210531 19:06:13.178" endtime="20210531 19:06:13.285"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:13.147" endtime="20210531 19:06:13.286"/>
+</kw>
+<kw name="Common - Click Element" library="common">
+<arg>${select_to}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${element_lct}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210531 19:06:13.612" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-171.png"&gt;&lt;img src="selenium-screenshot-171.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210531 19:06:13.312" endtime="20210531 19:06:13.612"/>
+</kw>
+<msg timestamp="20210531 19:06:13.612" level="FAIL">Element with locator '//div[@id='tab_search_flight']/div/form/div/div[2]/div/div[2]/div/div[2]/span/span[2]/div/span[2]/div[2]/p' not found.</msg>
+<status status="FAIL" starttime="20210531 19:06:13.294" endtime="20210531 19:06:13.612"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210531 19:06:15.643" level="INFO">Element '//div[@id='tab_search_flight']/div/form/div/div[2]/div/div[2]/div/div[2]/span/span[2]/div/span[2]/div[2]/p' is displayed.</msg>
+<status status="PASS" starttime="20210531 19:06:15.626" endtime="20210531 19:06:15.643"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:13.293" endtime="20210531 19:06:15.643"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210531 19:06:15.644" level="INFO">Clicking element '//div[@id='tab_search_flight']/div/form/div/div[2]/div/div[2]/div/div[2]/span/span[2]/div/span[2]/div[2]/p'.</msg>
+<status status="PASS" starttime="20210531 19:06:15.644" endtime="20210531 19:06:15.711"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:13.292" endtime="20210531 19:06:15.711"/>
+</kw>
+<kw name="Common - Click Element" library="common">
+<arg>${close_popup}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${element_lct}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210531 19:06:15.942" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-172.png"&gt;&lt;img src="selenium-screenshot-172.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210531 19:06:15.736" endtime="20210531 19:06:15.942"/>
+</kw>
+<msg timestamp="20210531 19:06:15.943" level="FAIL">The element '//*[@id="popup-newletter"]/div/div/button/span' should be visible, but it is not.</msg>
+<status status="FAIL" starttime="20210531 19:06:15.713" endtime="20210531 19:06:15.943"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210531 19:06:18.179" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-173.png"&gt;&lt;img src="selenium-screenshot-173.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210531 19:06:17.968" endtime="20210531 19:06:18.180"/>
+</kw>
+<msg timestamp="20210531 19:06:18.180" level="FAIL">The element '//*[@id="popup-newletter"]/div/div/button/span' should be visible, but it is not.</msg>
+<status status="FAIL" starttime="20210531 19:06:17.950" endtime="20210531 19:06:18.180"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210531 19:06:20.220" level="INFO">Element '//*[@id="popup-newletter"]/div/div/button/span' is displayed.</msg>
+<status status="PASS" starttime="20210531 19:06:20.194" endtime="20210531 19:06:20.220"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:15.712" endtime="20210531 19:06:20.220"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210531 19:06:20.220" level="INFO">Clicking element '//*[@id="popup-newletter"]/div/div/button/span'.</msg>
+<status status="PASS" starttime="20210531 19:06:20.220" endtime="20210531 19:06:20.264"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:15.712" endtime="20210531 19:06:20.264"/>
+</kw>
+<kw name="Search - choose date go" library="search">
+<kw name="Common - Click Element" library="common">
+<arg>${btn_date_go}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${element_lct}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210531 19:06:20.295" level="INFO">Element '//*[@id="tab_search_flight"]/div/form/div/div[3]/div/span' is displayed.</msg>
+<status status="PASS" starttime="20210531 19:06:20.267" endtime="20210531 19:06:20.295"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:20.266" endtime="20210531 19:06:20.295"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210531 19:06:20.296" level="INFO">Clicking element '//*[@id="tab_search_flight"]/div/form/div/div[3]/div/span'.</msg>
+<status status="PASS" starttime="20210531 19:06:20.295" endtime="20210531 19:06:20.632"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:20.265" endtime="20210531 19:06:20.633"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:20.265" endtime="20210531 19:06:20.633"/>
+</kw>
+<kw name="Common - Click Element" library="common">
+<arg>${select_date_go}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${element_lct}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210531 19:06:20.664" level="INFO">Element '//*[@id="ui-datepicker-div"]/div[2]/table/tbody/tr[1]/td[3]/a/span[1]' is displayed.</msg>
+<status status="PASS" starttime="20210531 19:06:20.634" endtime="20210531 19:06:20.664"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:20.634" endtime="20210531 19:06:20.664"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210531 19:06:20.665" level="INFO">Clicking element '//*[@id="ui-datepicker-div"]/div[2]/table/tbody/tr[1]/td[3]/a/span[1]'.</msg>
+<status status="PASS" starttime="20210531 19:06:20.664" endtime="20210531 19:06:20.741"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:20.634" endtime="20210531 19:06:20.741"/>
+</kw>
+<kw name="Search - choose date back" library="search">
+<kw name="Common - Click Element" library="common">
+<arg>${btn_date_back}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${element_lct}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210531 19:06:20.771" level="INFO">Element '//*[@id="tab_search_flight"]/div/form/div/div[4]/div/span' is displayed.</msg>
+<status status="PASS" starttime="20210531 19:06:20.745" endtime="20210531 19:06:20.771"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:20.744" endtime="20210531 19:06:20.771"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210531 19:06:20.772" level="INFO">Clicking element '//*[@id="tab_search_flight"]/div/form/div/div[4]/div/span'.</msg>
+<status status="PASS" starttime="20210531 19:06:20.771" endtime="20210531 19:06:20.861"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:20.743" endtime="20210531 19:06:20.861"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:20.742" endtime="20210531 19:06:20.862"/>
+</kw>
+<kw name="Common - Click Element" library="common">
+<arg>${select_date_back}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${element_lct}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210531 19:06:20.888" level="INFO">Element '//*[@id="ui-datepicker-div"]/div[2]/table/tbody/tr[5]/td[4]/a/span[1]' is displayed.</msg>
+<status status="PASS" starttime="20210531 19:06:20.864" endtime="20210531 19:06:20.889"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:20.863" endtime="20210531 19:06:20.889"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210531 19:06:20.890" level="INFO">Clicking element '//*[@id="ui-datepicker-div"]/div[2]/table/tbody/tr[5]/td[4]/a/span[1]'.</msg>
+<status status="PASS" starttime="20210531 19:06:20.889" endtime="20210531 19:06:20.939"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:20.862" endtime="20210531 19:06:20.940"/>
+</kw>
+<kw name="Search - choose ticket" library="search">
+<kw name="Common - Click Element" library="common">
+<arg>${btn_amount_ticket}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${element_lct}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210531 19:06:20.967" level="INFO">Element '//*[@id="tab_search_flight"]/div/form/div/div[5]/input[1]' is displayed.</msg>
+<status status="PASS" starttime="20210531 19:06:20.943" endtime="20210531 19:06:20.967"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:20.943" endtime="20210531 19:06:20.967"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210531 19:06:20.968" level="INFO">Clicking element '//*[@id="tab_search_flight"]/div/form/div/div[5]/input[1]'.</msg>
+<status status="PASS" starttime="20210531 19:06:20.968" endtime="20210531 19:06:21.034"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:20.941" endtime="20210531 19:06:21.034"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210531 19:06:21.545" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20210531 19:06:21.034" endtime="20210531 19:06:21.545"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:20.941" endtime="20210531 19:06:21.545"/>
+</kw>
+<kw name="Common - Click Element" library="common">
+<arg>${add_child_ticket}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${element_lct}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210531 19:06:21.568" level="INFO">Element '//*[contains(@id,"popover")]/div[2]/div/div[2]/div[2]/div/span[2]/button' is displayed.</msg>
+<status status="PASS" starttime="20210531 19:06:21.546" endtime="20210531 19:06:21.568"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:21.546" endtime="20210531 19:06:21.568"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210531 19:06:21.569" level="INFO">Clicking element '//*[contains(@id,"popover")]/div[2]/div/div[2]/div[2]/div/span[2]/button'.</msg>
+<status status="PASS" starttime="20210531 19:06:21.569" endtime="20210531 19:06:21.636"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:21.546" endtime="20210531 19:06:21.636"/>
+</kw>
+<kw name="Search - choose ticket" library="search">
+<kw name="Common - Click Element" library="common">
+<arg>${btn_amount_ticket}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${element_lct}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210531 19:06:21.661" level="INFO">Element '//*[@id="tab_search_flight"]/div/form/div/div[5]/input[1]' is displayed.</msg>
+<status status="PASS" starttime="20210531 19:06:21.640" endtime="20210531 19:06:21.661"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:21.639" endtime="20210531 19:06:21.661"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210531 19:06:21.661" level="INFO">Clicking element '//*[@id="tab_search_flight"]/div/form/div/div[5]/input[1]'.</msg>
+<status status="PASS" starttime="20210531 19:06:21.661" endtime="20210531 19:06:21.701"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:21.638" endtime="20210531 19:06:21.701"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210531 19:06:22.214" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20210531 19:06:21.702" endtime="20210531 19:06:22.214"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:21.637" endtime="20210531 19:06:22.214"/>
+</kw>
+<kw name="Common - Click Element" library="common">
+<arg>${btn_search}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10s</arg>
+<arg>2s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${element_lct}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210531 19:06:22.250" level="INFO">Element '//*[@id="tab_search_flight"]/div/form/div/div[7]/button' is displayed.</msg>
+<status status="PASS" starttime="20210531 19:06:22.216" endtime="20210531 19:06:22.250"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:22.216" endtime="20210531 19:06:22.250"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element_lct}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210531 19:06:22.251" level="INFO">Clicking element '//*[@id="tab_search_flight"]/div/form/div/div[7]/button'.</msg>
+<status status="PASS" starttime="20210531 19:06:22.250" endtime="20210531 19:06:23.222"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:22.215" endtime="20210531 19:06:23.222"/>
+</kw>
+<status status="PASS" starttime="20210531 19:06:10.040" endtime="20210531 19:06:23.223"/>
+</test>
+<status status="PASS" starttime="20210531 19:06:06.405" endtime="20210531 19:06:23.225"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
